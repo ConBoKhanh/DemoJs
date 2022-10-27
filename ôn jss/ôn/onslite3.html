@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 500px;
+            height: 400px;
+            text-align: center;
+            margin: auto;
+        }
+        img{
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body onload="loading()">
+    <img src="img/p0.png" id="anh" alt="">
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="dautien()">dautien</button>
+    <button onclick="last()">last</button>
+    <button onclick="play()">play</button>
+    <script>
+        var img = [],sum = 0 , anh = document.getElementById('anh'),t = null, kiemtra = 0;
+        function loading(){
+        for(var i = 0 ; i < 4;i++){
+            img[i] = "img/p"+i+".png"
+        }
+        play();
+    }
+    function next(){
+        if(sum == img.length-1){
+            sum = 0;
+            anh.src = img[sum];
+        }else{
+            sum++;
+            anh.src = img[sum];
+        }
+    }
+    // tự động chạy
+    function play(){
+        if(kiemtra == 0){
+            t = setInterval(function(){
+                next();
+            },1000)
+            kiemtra = 1;
+        }
+       
+    }
+    function stop (){
+        if(kiemtra = 1){
+            clearInterval(t);
+            kiemtra = 0;
+        }
+    }
+        function last(){
+            sum = img.length-1;
+            anh.src = img[sum]
+        }
+        function dautien(){
+            sum = 0;
+            anh.src = img[sum]
+        }
+    
+    function prev(){
+        if(sum == 0){
+            sum = img.length-1
+            anh.src =  img[sum];
+        }else{
+            sum--;
+            anh.src =  img[sum];
+        }
+    }
+    </script>
+</body>
+</html>

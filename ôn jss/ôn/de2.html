@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="de2.js"></script>
+    <style>
+        body{
+            width: 500px;
+            height: 600px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <h1>ĐĂNG KÍ KHÓA HỌC ONLINE</h1>
+        <table>
+            <tr>
+                <td>
+                    Họ tên
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+                <td>
+                    <samp id="hoten"></samp>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    email
+                </td>
+                <td>
+                    <input type="text" id="Email">
+                </td>
+                <td>
+                    <samp id="email"></samp>
+                    <samp id="checkemail"></samp>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    số điện thoại
+                </td>
+                <td>
+                    <input type="text" id="SDT">
+                </td>
+                <td>
+                    <samp id="sdt"></samp>
+                    <samp id="number"></samp>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    Username
+                </td>
+                <td>
+                    <input type="text" id="Username">
+                </td>
+                <td>
+                    <samp id="username"></samp>
+                    <samp id="checkus"></samp>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    password
+                </td>
+                <td>
+                    <input type="password" id="Pass">
+                </td>
+                <td>
+                    <samp id="pass"></samp>
+                </td>
+            </tr>
+
+                <tr>
+                    <td>
+                        rePass
+                    </td>
+                    <td>
+                        <input type="text" id="rePass">
+                    </td>
+                    <td>
+                        <samp id="repass"></samp>
+                        <samp id="checkrepass"></samp>
+                    </td>
+                </tr>
+            </tr>
+
+            <tr>
+                <td>
+                    Bạn biết chúng tôi qua
+                </td>
+                <td onchange="seVip()">
+                   <input type="radio" name="cbc" id="r1" checked>Bạn giới thiệu
+                   <input type="radio" name="cbc" id="r2">Qua Facebook
+                </td>
+                
+            </tr>
+                <tr>
+                    <td>
+                        Thưởng Vip
+                    </td>
+                    <td ">
+                        <input type="text" id="pvc">
+                    </td>
+                    <td>
+                        <samp id="pass"></samp>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        môn học
+                    </td>
+                    <td>
+                        <input type="checkbox" value="java">java
+                        <input type="checkbox" value="js">js
+                        <input type="checkbox" value="pythen">pythen
+                    </td>
+                    <td>
+                        <samp id="checkbox"></samp>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        <input type="button" onclick="send()" name="" id="button" value="submit">
+                    </td>
+                </tr>
+        </table>
+    </form>
+</body>
+</html>

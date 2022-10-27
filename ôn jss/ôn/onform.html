@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="onforrm.js"></script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkTen"></span></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkEmail"></span></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checksdt"></span></td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkUser"></span></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="" id=""></td>
+                <td><span id="checkpassword"></span></td>
+            </tr>
+            <tr>
+                <td>repass</td>
+                <td><input type="password" name="" id=""></td>
+                <td><span id="checkrepass"></span></td>
+            </tr>
+            <tr>
+                <td>Giới tính </td>
+                <td onchange="gioitinh()">
+                    <input type="radio" name="cbc" checked id="">nam
+                    <input type="radio" name="cbc" id="">nữ
+                </td>
+            </tr>
+            <tr>
+                <td>thu tiền giới tính</td>
+                <td><input type="text" id="tiengioitinh"></td>
+            </tr>
+            <tr>
+                <td>Môn học</td>
+                <td>
+                    <input type="checkbox" name="" id="">java
+                    <input type="checkbox" name="" id="">html
+                    <input type="checkbox" name="" id="">js
+                </td>
+               <td>
+                <span id="check"></span>
+               </td>
+            </tr>
+            <tr>
+                <td>Môn chính</td>
+                <td>
+                    <select name="" id="khoahoc" onchange="tienkhoahoc()">
+                        <option value="1300">HTML</option>
+                        <option value="2300">JS</option>
+                        <option value="3300">JAVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>tiền học</td>
+                <td><input type="text" id="tienhoc"></td>
+            </tr>   
+            <tr>
+                <td>
+                <input type="button" onclick="send()" name="" id="" value="submit">
+            </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

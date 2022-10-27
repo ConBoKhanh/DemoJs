@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ontaplan2.js"></script>
+    <style>
+        body{
+            height: 400px;
+            width: 600px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        form{
+            padding-left: 100px;
+            font-weight: 200;
+            
+        }
+       
+        td{
+            padding: 10px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <h1 >ĐĂNG KÍ KHÓA HỌC ONLINE</h1>
+            <tr>
+                <td>  Họ tên </td>
+                <td><input type="text"></td>
+                <td><span id="checkten"></span></td>
+            </tr>
+            <tr>
+                <td>  Email </td>
+                <td><input type="text"></td>
+                <td><span id="checkemailrong"></span></td>
+                
+            </tr>
+
+            <tr>
+                <td>  Số điện thoại </td>
+                <td><input type="text"></td>
+                <td><span id="checkSdtrong"></span></td>
+                
+            </tr>
+            <tr>
+                <td>Khóa học </td>
+                <td>
+                <select name="" id="khohoc" onchange="tienhoc()" style="width: 120px;">
+                    <option value="500">HTML</option>
+                    <option value="800">JS</option>
+                    <option value="1000">PHP</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>Học Phí</td>
+                <td><input type="text" id="phihoc"></td>
+            </tr>
+            <tr>
+                <td>Hình thức học</td>
+                <td><input type="radio" name="cbc" checked>Tại trường
+                    <input type="radio" name="cbc">Học Online
+                </td>
+            </tr>
+            
+            <tr>
+                <td id="nut"><input type="button" onclick="send()" name="" id="" value="Đăng kí"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

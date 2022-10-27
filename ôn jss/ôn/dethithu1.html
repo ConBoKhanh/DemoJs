@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script src="dethithu1.js"></Script>
+    <style>
+        body{
+            margin: 20px;          
+            width: 600px;
+            margin: auto;
+            height: 600px;
+            border: 1px solid red;
+        }
+        form{
+        padding: 10px;
+        margin: 10px;
+         
+        }
+        td{
+           font-weight: bold;
+            padding: 10px;
+        }
+        table{
+            
+            padding-left: 70px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1 style="text-align: center;">Ôn tập</h1>
+        <table>
+            <tr>
+                <td>
+                    Họ tên
+                </td>
+                <td>
+                    <input type="text" id="name">
+
+                </td>
+                <td>
+                    <samp id="hoten"></samp>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text" id="Email">
+                </td>
+                <td>
+                    <samp id="email"></samp>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Số điện thoại
+                </td>
+                <td>
+                    <input type="text" id="SDT">
+                </td>
+                <td>
+                    <samp id="sdt"></samp>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Username
+                </td>
+                <td>
+                    <input type="text" id="Username">
+                </td>
+                <td>
+                    <samp id="username"></samp>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pass
+                </td>
+                <td>
+                    <input type="password" id="pass">
+                </td>
+                <td>
+                    <samp id="pass"></samp>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    repass
+                </td>
+                <td>
+                    <input type="password" id="repass">
+                </td>
+                <td>
+                    <samp id="repass"></samp>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    gender
+                </td>
+                <td onchange="diadiem()">
+                    <input type="radio" name="cbc"  value="Bạn giới thiệu" checked id="r1">Bạn giới thiệu
+                    <input type="radio" name="cbc"  value="Qua Facebook" id="r2" >Qua Facebook
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    thành tiền 
+                </td>
+                <td>
+                   <input type="text" id="pvc" >
+                </td>
+            </tr>
+
+           <tr>
+                <td>
+                    môn ưa thích
+                </td>
+                <td>
+                    <input type="checkbox"  value="java" >java
+                    <input type="checkbox"  value="javaScrip" >javaScrip
+                    <input type="checkbox"  value="pythen" >pythen
+                </td>
+                <td>
+                    <samp id="checkbox"></samp>
+                </td>
+            </tr>
+
+            <div id="nut">
+                 <tr>
+                <td>
+                   <input onclick="send()" type="button" value="submit" id="button" style="text-align: center;">
+                </td>
+                <td>
+                  
+                </td>
+            </tr>
+        </div>
+
+        </table>
+    </form>
+</body>
+</html>

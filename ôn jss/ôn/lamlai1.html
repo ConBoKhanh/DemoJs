@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lai2.js"></script>
+    <style>
+         body{
+            margin: 20px;          
+            width: 700px;
+            margin: auto;
+            height: 700px;
+            border: 1px solid red;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+        padding: 10px;
+        margin: 10px;
+         
+        }
+        td{
+           
+            padding: 10px;
+        }
+        table{
+            padding-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Thi</h1>
+        <table>
+            <tr>
+                <td>
+                    Họ tên
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <span id="checkten"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <span id="chackEmail"></span>
+                </td>
+                <td>
+                    <span id="loi"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Số điện thoại
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <span id="rongsdt"></span>
+                </td>
+                <td>
+                    <span id="checkSDT"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                      User
+                </td>
+                <td>
+                    <input type="text" >
+                </td>
+                <td>
+                    <span id="rongUs"></span>
+                </td>
+                <td>
+                    <span id="longUs"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    password
+                </td>
+                <td>
+                    <input type="password"  >
+                </td>
+                <td>
+                    <span id="rongPass"></span>
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td>
+                    repass
+                </td>
+                <td>
+                    <input type="password" >
+                </td>
+                <td>
+                    <span id="rongRepass"></span>
+                </td>
+                <td>
+                    <span id="giong"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    gender
+                </td>
+                <td onchange="tiennong()">
+                    <input type="radio" name="cbc" checked>nam 
+                    <input type="radio" name="cbc">nữ
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Thu tiền giới tính
+                </td>
+                <td>
+                    <input type="text" id="cc">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    môn học
+                </td>
+                <td>
+                   <input type="checkbox">java
+                   <input type="checkbox">html
+                   <input type="checkbox">js
+                </td>
+                <td>
+                    <span id="checkbox"></span>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                Môn học
+            </td>
+                <td>
+                <select name="" id="khoahoc" onchange="duydz()">
+                    <option value="100">java</option>
+                    <option value="200">javasCR7</option>
+                    <option value="300">HtMl</option>
+                </td>
+                </select>
+            </tr>
+            <tr>
+                <td>
+                    Tiền học
+                </td>
+                <td>
+                    <input type="text" id="tienhoc">
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                    <input type="button" value="submit" id="" onclick="send()">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

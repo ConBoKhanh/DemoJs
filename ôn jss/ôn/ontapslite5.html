@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="onforrm.js"></script>
+    <style>
+        body{
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body onload="loading()">
+    <form>
+        <table>
+            <tr>
+                <td>Họ tên</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkTen"></span></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkEmail"></span></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checksdt"></span></td>
+            </tr>
+            <tr>
+                <td>User</td>
+                <td><input type="text" name="" id=""></td>
+                <td><span id="checkUser"></span></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="password" name="" id=""></td>
+                <td><span id="checkpassword"></span></td>
+            </tr>
+            <tr>
+                <td>repass</td>
+                <td><input type="password" name="" id=""></td>
+                <td><span id="checkrepass"></span></td>
+            </tr>
+            <tr>
+                <td>Giới tính </td>
+                <td onchange="gioitinh()">
+                    <input type="radio" name="cbc" checked id="">nam
+                    <input type="radio" name="cbc" id="">nữ
+                </td>
+            </tr>
+            <tr>
+                <td>thu tiền giới tính</td>
+                <td><input type="text" id="tiengioitinh"></td>
+            </tr>
+            <tr>
+                <td>Môn học</td>
+                <td>
+                    <input type="checkbox" name="" id="">java
+                    <input type="checkbox" name="" id="">html
+                    <input type="checkbox" name="" id="">js
+                </td>
+               <td>
+                <span id="check"></span>
+               </td>
+            </tr>
+            <tr>
+                <td>Môn chính</td>
+                <td>
+                    <select name="" id="khoahoc" onchange="tienkhoahoc()">
+                        <option value="1300">HTML</option>
+                        <option value="2300">JS</option>
+                        <option value="3300">JAVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>tiền học</td>
+                <td><input type="text" id="tienhoc"></td>
+            </tr>   
+            <tr>
+                <td>
+                <input type="button" onclick="send()" name="" id="" value="submit">
+            </td>
+            </tr>
+        </table>
+    </form>
+    
+    <img src="img/p0.png" id="anh" alt="">
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">next</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="frist()">frist</button>
+    <button onclick="last()">last</button>
+    <button onclick="play()">play</button>
+    <script>
+        var img = [] , sum = 0 , anh = document.getElementById('anh'),t = null,kiemtra = 0;
+        function loading(){
+            for(var i = 0 ; i < 4 ; i++){
+                img[i] = "img/p"+i+".png";
+            }
+            play();
+        }
+        
+        function next(){
+            if(sum == img.length-1){
+                sum = 0;
+                anh.src = img[sum];
+            }else{
+                sum++;
+                anh.src = img[sum];
+            }
+        }
+
+        function play(){
+            if(kiemtra == 0){
+                t = setInterval(function (){
+                    next();
+                },1000)
+                kiemtra = 1;
+            }
+        }
+        function stop(){
+            if(kiemtra = 1){
+                clearInterval(t);
+                kiemtra = 0 ;
+            }
+        }
+        function frist(){
+            sum = 0 ;
+            anh.src = img[sum];
+        }
+        function last(){
+            sum = img.length-1;
+            anh.src = img[sum];
+        }
+        function prev(){
+            if(sum == 0){
+                sum = img.length-1;
+                anh.src = img[sum];
+            }else{
+                sum--;
+                anh.src = img[sum];
+            }
+        }
+    </script>
+</body>
+</html>
