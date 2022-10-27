@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            width: 500px;
+            border: 1px solid red;
+            text-align: center;
+            padding: 20px;
+        }
+        #tatca{
+ 
+        }
+        div{
+            padding: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+        <div id="tatca">
+            <div><tr>Tên Sách</tr><input type="text" id="tensach"><samp id="loi1"></samp></div>
+            <div><tr>NXB</tr><input type="text" id="nxb"><samp id="loi2"></samp></div>
+            <div><tr>Số Lượng</tr><input type="number" id="soluong" onchange="thanhtien(this)"><samp id="loi3"></samp></div>
+            <div><tr>Đơn giá</tr><input type="number" id="dongia"><samp id="loi4"></samp><select name="" id="">
+                <option value="">VND</option>
+                <option value="">$</option>
+            </select></div>
+            <div><tr>Tổng tiền</tr><input type="number" id="thanhtien"><samp id="loi5"></samp></div>
+            <div><tr>tg xuất bản</tr><input type="date" id="ngayxuatban"><samp id="loi6"></samp></div>
+            <div><tr>Loại sách</tr><select name="" size="6" id="">
+                <option value="">Sách thiếu nhi</option>
+                <option value="">Sách thiếu nhi1</option>
+                <option value="">Sách thiếu nhi2</option>
+                <option value="">Sách thiếu nhi3</option>
+                <option value="">Sách thiếu nhi4</option>
+                <option value="">Sách thiếu nhi5</option>
+                <option value="">Sách thiếu nhi6</option>
+            </select></div>
+            <div><tr>Người nhâp</tr><input type="text"id="nguoinhap"><samp id="loi7"></samp></div>
+            <div><tr>Sản phẩm đang có</tr><input type="checkbox">trong kho
+            <input type="checkbox">bày bán
+            <input type="checkbox">chưa kiếm tra
+            </div>
+            <div><tr>nơi nhận hàng</tr><input type="radio" onclick='giaohang(this)' value='noithanh' name="noinhan" id="1">nội thành
+            <input type="radio" onclick='giaohang(this)' value='nguoithanh' name="noinhan" id="2" >ngoại thành
+            </div>
+            <div><tr>phí vẫn chuyển</tr><input type="text" id="phivanchuyen"><samp id="loi8"></samp></div>
+            <button onclick="check()">hiển thị thông tin</button>
+            <button onclick="">xóa thông tin</button>
+        </div>
+</body>
+    <script>
+        // function check(){
+        //     var ten = document.querySelector('#tensach').value
+        //     var nxb = document.querySelector('#nxb').value
+        //     var soluong = document.querySelector('#soluong').value
+        //     var dongia = document.querySelector('#dongia').value
+        //     var thanhtien = document.querySelector('#thanhtien').value
+        //     var ngayxuatban = document.querySelector('#ngayxuatban').value
+        //     var nguoinhap = document.querySelector('#nguoinhap').value
+        //     var phivanchuyen = document.querySelector('#phivanchuyen').value
+        //     var loi1 = document.querySelector('#loi1')
+        //     var loi2 = document.querySelector('#loi2')
+        //     var loi3 = document.querySelector('#loi3')
+        //     var loi4 = document.querySelector('#loi4')
+        //     var loi5 = document.querySelector('#loi5')
+        //     var loi6 = document.querySelector('#loi6')
+        //     var loi7 = document.querySelector('#loi7')
+        //     var loi8 = document.querySelector('#loi8')
+        //     if(ten=='')
+        //     loi1.innerText='không được để trống tên'
+        //     else
+        //     loi1.innerText=''
+
+        //     if(nxb=='')
+        //     loi2.innerText='không được để trống '
+        //     else
+        //     loi2.innerText=''
+
+        //     if(soluong<0)
+        //     loi3.innerText='không được để trống '
+        //     else
+        //     loi3.innerText=''
+
+        //     if(dongia=='')
+        //     loi4.innerText='không được để trống '
+        //     else
+        //     loi4.innerText=''
+
+        //     if(thanhtien=='')
+        //     loi5.innerText='không được để trống '
+        //     else
+        //     loi5.innerText=''
+
+        //     if(ngayxuatban=='')
+        //     loi6.innerText='không được để trống '
+        //     else
+        //     loi6.innerText=''
+
+        //     if(nguoinhap=='')
+        //     loi7.innerText='không được để trống '
+        //     else
+        //     loi7.innerText=''
+
+        //     if(phivanchuyen=='')
+        //     loi8.innerText='không được để trống '
+        //     else
+        //     loi8.innerText=''
+
+        // }
+        function thanhtien(p){
+            var dongia = document.querySelector('#dongia').value
+            document.querySelector('#thanhtien').value = Number(p.value)*dongia
+
+        }
+        function giaohang(t){
+            if(t.value=='noithanh'){
+                document.getElementById('phivanchuyen').value = '0'
+
+            }
+            else{
+                document.getElementById('phivanchuyen').value = '10000'
+            }
+            
+        }
+        
+    </script>
+</html>

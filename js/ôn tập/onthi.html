@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            margin: auto;
+            border: 1px solid red;
+            width: 400px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   <div >
+    <button onclick="tien()">Tiến</button>
+    <button onclick="lui()">Lùi</button>
+   </div>
+   <img src="1.png" alt="" width="">
+
+   <script>
+    const list = ['1.png','2.png','3.png']
+    var i = 0;
+    function lui(){
+        i--
+        if(i==-1){
+            i=2
+
+        }
+        document.querySelector('img').src = list[i]
+    }
+    function tien(){
+        i++
+        if(i==3){
+            i=0
+        }
+        document.querySelector('img').src = list[i]
+    }
+    setInterval(tien,1500)
+   </script>
+</body>
+
+</html>

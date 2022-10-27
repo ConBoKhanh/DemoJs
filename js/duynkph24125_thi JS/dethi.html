@@ -1,0 +1,149 @@
+<!-- tạo dao diện có 4 nút pre stop start next
+Yêu cầu tự động chạy 1 s
+4 nút như hình -->
+<!-- bắt buộc phải nhập tất cả các trường 
+Nhập đúng rằng buộc email
+Mật khẩu ít nhất 6 kí tự không quá 20 kí tự và có 1 từ viết hoa -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="dethi.js"></script>
+    <style>
+        body {
+            width: 600px;
+            margin: auto;
+
+        }
+
+        #bai1 {
+            text-align: center;
+        }
+
+        form {
+
+            border: 1px solid black;
+            width: 60%;
+            height: 360px;
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+        }
+
+        #tende {
+            padding-top: 5px;
+            height: 60px;
+            color: white;
+            background-color: rgb(46, 46, 131);
+        }
+        #button{
+            padding-left: 30px;
+        }
+        table {
+            padding-right: 40px;
+        }
+
+        #bai2 {
+            padding-left: 80px;
+        }
+        span{
+            color: red;
+            
+        }
+    </style>
+</head>
+
+<body onload="loading()">
+    <div id="bai1">
+        <img src="img/p0.png" id="anh" alt="">
+        <button onclick="pre()">pre</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="start()">start</button>
+        <button onclick="next()">next</button>
+    </div>
+    <script>
+        var img = [], sum = 0, anh = document.getElementById('anh'), t = null, kiemtra = 0;
+        function loading() {
+            for (var i = 0; i < 4; i++) {
+                img[i] = "img/p" + i + ".png";
+            }
+            start();
+        }
+
+        function next() {
+            if (sum == img.length - 1) {
+                sum = 0;
+                anh.src = img[sum];
+            } else {
+                sum++;
+                anh.src = img[sum];
+            }
+        }
+
+        function start() {
+            if (kiemtra == 0) {
+                t = setInterval(function () {
+                    next();
+                }, 1000)
+                kiemtra = 1;
+            }
+        }
+        function stop() {
+            if (kiemtra = 1) {
+                clearInterval(t);
+                kiemtra = 0;
+            }
+        }
+        function pre() {
+            if (sum == 0) {
+                sum = img.length - 1;
+                anh.src = img[sum];
+            } else {
+                sum--;
+                anh.src = img[sum];
+            }
+        }
+    </script>
+    <br><br>
+    <br><br>
+    <form>
+        <div id="tende" style="text-align: center;">
+            <h2>Đăng nhập</h2>
+        </div>
+        <div id="bai2">
+            <td>
+                <h3>Đăng nhập bằng email</h3>
+            </td>
+            <tr>
+                <td><input type="text" style="height: 30px; width: 190px;"></td>
+                <td><span id="checkEmail"></span></td>
+            </tr>
+            <td>
+                <h3>Mật khẩu</h3>
+            </td>
+            <tr>
+                <td><input type="password" name="" id="" style="height: 30px; width: 190px;"></td>
+                <td><span id="checkPass"></span></td>
+            </tr>
+            <td>
+                <h3> </h3>
+            </td>
+            <div id="button"
+                <tr>
+                    <td><input type="button" onclick="send()" value="Đăng Nhập"
+                            style="height: 50px; background-color: rgb(46, 46, 131); width: 150px;color: white; font-size: larger;">
+                    </td>
+                </tr>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>

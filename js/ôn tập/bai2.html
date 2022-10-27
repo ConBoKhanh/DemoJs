@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vidu_1.css">
+</head>
+
+<body>
+    <h1>Thực hành Dom</h1>
+    <form action="">
+        Họ tên <input type="text" name="" id="hoten"> <br>
+        User Name <input type="text" name="" id="username"> <br>
+        Email <input type="email" name="" id="email"> <br>
+        Password <input type="password" name="" id="pass"> <br>
+
+        <button type="button" onclick="them()">Thêm</button>
+    </form>
+    <hr>
+    <table id="list_user" border="1" width="500" cellpandding="5">
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        function them(){
+            //1. lấy dữ liệu cho vào biến
+            var hoten = document.querySelector("#hoten").value;
+            var username = document.querySelector("#username").value;
+            var email = document.querySelector("#email").value;
+            var paswword = document.querySelector("#pass").value;
+            
+            
+            //2 tạo dòng có chứ các ô
+            
+            
+            var the_tr = document.createElement('tr'); //tạo dòng mới
+            var td1 = document.createElement('td'); // tạo ô mới
+            td1.innerText = hoten; // bỏ dữu liệu vào ô mới
+            td1.innerHTML='<spam onclick="thongtin(this)">'+hoten+'</span>';
+            the_tr.appendChild (td1); // gắn ô vừa tạo vào dòng
+            //tạo cho ô username
+            var td2 = document.createElement('td');
+            td2.innerText = username;
+            the_tr.appendChild(td2);
+            //tạo cho ô email
+            var td3 = document.createElement('td');
+            td3.innerText = email;
+            the_tr.appendChild(td3);
+            //tạo ô cho password
+            var td4 = document.createElement('td');
+            td4.innerText = paswword;
+            the_tr.appendChild(td4)
+            //thêm ô xóa
+            var td5 = document.createElement('td');
+            td5.innerHTML = '<button onclick="XoaDong(this)">Xóa</button>';
+            the_tr.appendChild(td5)
+            //3. gán dòng vào trong bảng
+            var the_tbody = document.querySelector("#list_user tbody");
+            the_tbody.appendChild( the_tr);//Đưa thẻ t vào trong thẻ tbody
+
+        }
+        function XoaDong(obj){
+            //obj : là nút bấm xóa ;
+            console.log(obj);
+            //hỏi người dùng ở đây
+            var hoi=confirm("bạn có đòng ý xoá không");
+            if(!hoi){
+                return;
+            }
+var tr=obj.parentElement.parentElement;//lấy dòng chứa nút bấm
+            console.log(tr);
+            var tbody=tr.parentElement;//lấy char dòng hiện tại
+            //xoá dòng bằng cách sử dụng thẻ con
+            tbody.removeChild(tr);
+        }
+        function thongtin(obj){
+ console.log(obj);
+ var _hoten =obj.innerText;
+var _td=obj.parentElement;
+var em_1=_td.nexElementSibling;
+var _username=em_1.innerText;
+var _email=_username.innerText;
+alert("họ tên:"+_hoten+"\nusename:"+_username+"\n email:"+_email);
+
+        }
+        
+    </script>
+</body>
+
+</html>

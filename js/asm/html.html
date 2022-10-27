@@ -1,0 +1,102 @@
+<htmL>
+    <head>
+        <style>
+            body{
+                padding-top: 20px;
+                height: 640px;
+                width: 800px;
+                margin: auto;
+                text-align: center;
+                border: 1px solid black;
+                
+            }
+            h2{
+                
+                border: 1px solid black; 
+               
+            }
+            table {
+                width: 100%;
+                
+                color: black;
+                font-size: large;
+            }
+             th, td {
+             border:1px solid rgb(0, 0, 0);
+             width: 10%;
+            }
+            .dat{
+                background-color: green;
+                color: white;
+            }
+            .khongdat{
+                background-color: red;
+                color: white;
+            }
+            
+            #input{
+                border: 1px solid black;
+                margin-bottom: 10px;
+                width: 300px;
+                height: 30px;
+                
+            }
+            #them{
+                background-color:palegreen;
+                border: 1px solid rgb(151, 42, 165);
+                color: black;
+                width: 150px;
+                height: 30px;
+            }
+            #xoa{
+                background-color: rgb(126, 42, 165);
+                border: 1px solid rgb(130, 42, 165);
+                color: white;
+                width: 150px;
+                height: 30px;
+            }
+            #form{
+                padding: 30px;
+            }
+           
+
+                                
+        </style>
+    </head>
+    <body> <h2>Sinh Viên</h2>
+    
+        <form id="form">
+            <input id="input" type="text" name="ten" placeholder="Mời nhập tên :">
+            <input id="input" type="text" name="tuoi" placeholder="Mời nhập tuổi :"><br>
+            <input id="input" type="text" name="lop" placeholder="Mời nhập lớp "">
+            <input id="input" type="text" name="diemCSharp" placeholder="Mời nhập điểm C# :"><br>
+            <input id="input" type="text" name="diemJS" placeholder="Mời nhập điểm JS :">
+            <input id="input" type="text" name="diemHTML" placeholder="Mời nhập điểm HTML :"><br>
+
+            <input id="them" type="button" value="Thêm" onclick="xuat()">
+            
+            
+
+
+        </form>
+
+        <table>
+            <tr>
+                <td>Tên Sinh viên</td>
+                <td>Tuổi sinh viên</td>
+                <td>Lớp </td>
+                <td>Điểm môn C#</td>
+                <td>Điểm môn Javascript</td>
+                <td>Điểm môn HTML</td>
+                <td>Điểm môn Trung Bình</td>
+                <td>Kết Quả</td>
+              </tr>
+        </table>
+
+
+
+        <div id="ketqua"></div>
+        
+        <script src="js.js"></script>
+    </body>
+</htmL>
